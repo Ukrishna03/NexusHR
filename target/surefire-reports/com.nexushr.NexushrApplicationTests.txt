@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.nexushr.NexushrApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.081 s -- in com.nexushr.NexushrApplicationTests

@@ -24,10 +24,12 @@ public class JWTUtil {
 	public JWTUtil() {
 		
 		String secretKey = System.getenv("JWT_SECRET_KEY");
+
 		if (secretKey == null || secretKey.isEmpty()) {
-			secretKey = "MySuperSecretJWTKeyForNexusHRApplication2026";
+		    throw new IllegalStateException("JWT_SECRET_KEY is not configured");
 		}
-		key=Keys.hmacShaKeyFor(secretKey.getBytes());
+
+		key = Keys.hmacShaKeyFor(secretKey.getBytes());
 		
 	}
 	
@@ -75,7 +77,7 @@ public class JWTUtil {
     }
     
     public String extractToken(String header) {
-    	if (header != null && header.startsWith("Bearer")) {
+    	if (header != null && header.startsWith("Bearer ")) {
     		return header.substring(7);
     	}
     	return null;
