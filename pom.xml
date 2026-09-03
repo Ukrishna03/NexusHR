@@ -96,6 +96,12 @@
     <artifactId>cloudinary-http44</artifactId>
     <version>1.29.0</version>
 </dependency>
+
+<dependency>
+    <groupId>com.mysql</groupId>
+    <artifactId>mysql-connector-j</artifactId>
+    <scope>runtime</scope>
+</dependency>
 	</dependencies>
 
 	<build>
