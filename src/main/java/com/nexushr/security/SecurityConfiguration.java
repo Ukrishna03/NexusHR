@@ -44,13 +44,14 @@ public class SecurityConfiguration {
             .sessionManagement(sm ->
                 sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers(
-                    "/api/user_Auth/register",
-                    "/api/user_Auth/Login",
-                    "/api/user_Auth/forgot_password",
-                    "/api/user_Auth/reset_password"
-                )
-                .permitAll()
+            		.requestMatchers(
+            			    "/",
+            			    "/api/user_Auth/register",
+            			    "/api/user_Auth/Login",
+            			    "/api/user_Auth/forgot_password",
+            			    "/api/user_Auth/reset_password"
+            			)
+            			.permitAll()
                 .anyRequest()
                 .authenticated());
 
